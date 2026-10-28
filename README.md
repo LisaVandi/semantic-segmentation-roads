@@ -215,27 +215,4 @@ python temperature.py
 ```
 
 Semantic evaluation and fine-tuning run through the notebooks in `notebooks/step_4` and
-`notebooks/step_5`. See `eval/README.md` for per-script details.
-
-## Reproducibility notes
-- Several scripts contain hard-coded Colab/Drive paths (datasets, checkpoints, saved scores,
-  outputs) in `eval/evalAnomalyEOMT.py`, `eval/evalAnomalyERFNET.py` and `eval/temperature.py`.
-- Seeds are fixed (42) in the evaluation scripts; reported numbers come from single runs.
-- ERFNet is evaluated on images resized to 512×1024, EoMT at native resolution with sliding
-  windows, so cross-architecture numbers are indicative rather than strictly like-for-like.
-- The best fine-tuning checkpoint is selected on the Cityscapes validation set, which is also
-  the set used to report mIoU.
-
-## References
-Kerssies et al., *Your ViT is Secretly an Image Segmentation Model* (EoMT), CVPR 2025 ·
-Cheng et al., *Per-Pixel Classification is Not All You Need* (MaskFormer), NeurIPS 2021 ·
-Cheng et al., *Mask2Former*, CVPR 2022 · Oquab et al., *DINOv2*, 2023 ·
-Romera et al., *ERFNet*, IEEE T-ITS 2018 · Nayal et al., *RbA*, ICCV 2023 ·
-Hendrycks & Gimpel, 2016 · Hendrycks et al., *Scaling OoD Detection*, 2019 ·
-Liang et al., *ODIN* (temperature scaling), 2017 · Cordts et al., *Cityscapes*, CVPR 2016 ·
-Lin et al., *COCO*, ECCV 2014 · Blum et al., *Fishyscapes*, IJCV 2021 ·
-Chan et al., *SegmentMeIfYouCan*, 2021.
-
-## Credits and license
-The `eomt/` folder derives from the official EoMT implementation (MIT License, Mobile
-Perception Systems Lab, TU/e); the ERFNet evaluation utilities derive from the course template.
+`notebooks/step_5`. 
